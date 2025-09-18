@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>orangutan — AI Developer Portfolio</title>
+  <meta name="description" content="orangutan | 초보 인공지능 개발자 포트폴리오" />
+  <meta property="og:title" content="orangutan — AI Developer" />
+  <meta property="og:description" content="초보 인공지능 개발자 포트폴리오" />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light" />
+  <style>
+    :root{
+      --bg:white;          /* 화이트 배경 */
+      --fg:black;          /* 본문 텍스트 */
+      --muted:#666;        /* 보조 텍스트(회색) */
+      --line:#e5e5e5;      /* 구분선 */
+      --shadow: 0 2px 16px rgba(0,0,0,.06);
+      --radius: 16px;
+      --maxw: 1080px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
+      letter-spacing:.2px;
+    }
+    a{color:inherit; text-decoration: none}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10; background:var(--bg);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{font-weight:800; text-transform:lowercase; letter-spacing:0.5px}
+    .brand .dot{display:inline-block; width:6px; height:6px; background:var(--fg); border-radius:50%; margin-left:6px}
+    nav ul{display:flex; gap:20px; list-style:none; padding:0; margin:0}
+    nav a{opacity:.8}
+    nav a:hover{opacity:1; text-decoration:underline}
+
+    /* Hero */
+    .hero{padding:96px 0 72px; border-bottom:1px solid var(--line)}
+    .hero h1{font-size:48px; line-height:1.1; margin:0 0 12px; letter-spacing:-.5px}
+    .hero p{color:var(--muted); margin:0 0 24px}
+    .actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border:1px solid var(--fg); border-radius:999px; font-weight:600}
+    .btn.fill{background:var(--fg); color:var(--bg)}
+    .btn:hover{transform:translateY(-1px)}
+
+    /* Sections */
+    section{padding:64px 0}
+    section h2{font-size:24px; margin:0 0 16px}
+    .muted{color:var(--muted)}
+    .grid{display:grid; gap:16px}
+
+    /* About */
+    .about{display:grid; grid-template-columns:1fr; gap:16px}
+
+    /* Skills */
+    .chips{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{border:1px solid var(--fg); padding:6px 10px; border-radius:999px; font-size:14px}
+
+    /* Projects */
+    .projects{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+    .card{border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
+    .card h3{margin:0 0 6px; font-size:18px}
+    .card p{margin:0 0 12px; color:var(--muted)}
+    .meta{font-size:13px; color:#888}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line); padding:28px 0; color:#888}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .hero{padding:72px 0 56px}
+      .hero h1{font-size:36px}
+    }
+    /* Print */
+    @media print{
+      header,.actions{display:none}
+      a{text-decoration:underline}
+      .card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="orangutan home">orangutan<span class="dot"></span></a>
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero" aria-label="intro">
+      <h1>초보 인공지능 개발자 <span style="white-space:nowrap">orangutan</span></h1>
+      <p>Python·Java를 공부하며 머신러닝과 생성형 AI에 입문했습니다. 간결한 문제 정의와 재현 가능한 실험을 중시합니다.</p>
+      <div class="actions">
+        <a class="btn fill" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#contact">이메일</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">이력서(PDF)</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="about">
+        <p class="muted">아이디어 발상을 강점으로 삼아 작은 실험을 빠르게 반복합니다. 관심 분야는 프롬프트 엔지니어링, 경량화(Lite/Quant), 간단한 데이터 파이프라인 구축입니다. 현재는 <strong>GitHub Pages</strong>용 정적 웹 프로젝트와 Azure OpenAI 활용 토이 앱을 만들고 있습니다.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">Java</span>
+        <span class="chip">HTML</span>
+        <span class="chip">Git / GitHub</span>
+        <span class="chip">pandas</span>
+        <span class="chip">scikit‑learn</span>
+        <span class="chip">Prompt Engineering</span>
+        <span class="chip">Azure OpenAI</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid projects">
+        <article class="card">
+          <h3>Recipe Recommender (Toy)</h3>
+          <p>재료 리스트를 입력하면 국가별 요리를 추천하고 간단 레시피 요약을 생성.</p>
+          <div class="meta">HTML • JS • Azure OpenAI</div>
+          <a class="btn" href="#" aria-label="project link">View</a>
+        </article>
+        <article class="card">
+          <h3>Image Gen Comparator</h3>
+          <p>동일 프롬프트로 모델별 이미지를 비교하고 메타데이터를 기록.</p>
+          <div class="meta">Python • Notebook</div>
+          <a class="btn" href="#">View</a>
+        </article>
+        <article class="card">
+          <h3>Mini ML Pipeline</h3>
+          <p>간단한 전처리–학습–평가 파이프라인 템플릿.</p>
+          <div class="meta">scikit‑learn</div>
+          <a class="btn" href="#">View</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="muted">협업/문의: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p class="muted">LinkedIn: <a href="#" target="_blank" rel="noopener">link</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> orangutan — Built with HTML & CSS</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
