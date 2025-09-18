@@ -1,6 +1,6 @@
 # Newbie AI Developer Portfolio
 
-현 인간지능 개발자
+현 인간지능 개발자,
 미래 인공지능 개발자
 
 ## 기술스택
