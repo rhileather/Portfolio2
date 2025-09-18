@@ -6,5 +6,6 @@
 ## 기술스택
 - AI, ML, DL
 
-## 라이브데모
-- 포트폴리오 사이트
+## 포트폴리오
+- https://rhileather.github.io/Portfolio2/
+- https://rhileather.github.io/Portfolio2/shoooooting.html
